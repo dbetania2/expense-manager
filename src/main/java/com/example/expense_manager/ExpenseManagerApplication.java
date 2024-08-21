@@ -11,5 +11,4 @@ public class ExpenseManagerApplication {
 		// Mensaje para indicar que la aplicación se ha iniciado exitosamente
 		System.out.println("Expense Manager Application has started successfully!");
 	}
-
 }

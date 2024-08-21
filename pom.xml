@@ -20,28 +20,56 @@
 	</properties>
 
 	<dependencies>
+		<!-- Spring Boot Starter Data JPA: Incluye las dependencias necesarias para trabajar con JPA y Hibernate -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+		<!-- Spring Boot Starter Web: Proporciona las dependencias necesarias para aplicaciones web, incluyendo RESTful APIs y controladores -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<!-- MySQL Connector/J: Permite la conexión a una base de datos MySQL. La scope 'runtime' es adecuada para los controladores de base de datos -->
 		<dependency>
 			<groupId>com.mysql</groupId>
 			<artifactId>mysql-connector-j</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- Spring Boot Starter Test: Incluye las bibliotecas necesarias para pruebas unitarias y de integración en Spring Boot -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<!-- Spring Boot Starter Thymeleaf: Proporciona soporte para Thymeleaf como motor de plantillas. La versión no es necesaria, ya que Spring Boot maneja las versiones -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+			<!-- <version>3.3.2</version> Esta línea puede ser eliminada ya que la versión será manejada por el parent de Spring Boot -->
+		</dependency>
+
+		<!-- Jakarta Persistence API: La versión más reciente de la API de persistencia. Esta reemplaza a javax.persistence-api -->
+		<dependency>
+			<groupId>jakarta.persistence</groupId>
+			<artifactId>jakarta.persistence-api</artifactId>
+			<version>3.0.0</version> <!-- O la versión que prefieras -->
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.0.0.Final</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
 		<plugins>
+			<!-- Plugin para manejar recursos de Maven, configurado para usar UTF-8 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
@@ -56,6 +84,7 @@
 					</resources>
 				</configuration>
 			</plugin>
+			<!-- Plugin de Maven para Spring Boot, necesario para construir y ejecutar aplicaciones Spring Boot -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
